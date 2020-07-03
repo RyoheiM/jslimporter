@@ -1,0 +1,14 @@
+{% extends 'factors/base.html' %} {% block content %}
+<h2>紙面情報（部・章・節・項タイトル）</h2>
+
+
+
+<form method="POST" action="">
+  <table class="table">
+    {% csrf_token %} {{ form.as_table }}
+  </table>
+  <button type="submit" class="save btn btn-default">登録</button>
+</form>
+
+</form>
+{% endblock %}

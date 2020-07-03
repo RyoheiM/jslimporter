@@ -1,0 +1,25 @@
+{% extends 'factors/base.html' %} {% block content %}
+<h2>紙面情報（部・章・節・項タイトル）</h2>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">部タイトル</th>
+      <th scope="col">章タイトル</th>
+      <th scope="col">節タイトル</th>
+      <th scope="col">項タイトル</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ bunch.id }}</td>
+      <td>{{ bunch.categoryname }}</td>
+      <td>{{ bunch.chaptername }}</td>
+      <td>{{ bunch.sectionname }}</td>
+      <td>{{ bunch.termname }}</td>
+    </tr>
+  </tbody>
+</table>
+<a href="{% url 'factors:bunchedit' pk=bunch.pk %}">編集</a>
+
+{% endblock %}
